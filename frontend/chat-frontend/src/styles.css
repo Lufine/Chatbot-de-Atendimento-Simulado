@@ -1,0 +1,260 @@
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --primary: #0b74ff;
+    --accent: #00b37e;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: var(--bg);
+    color: #0f1724
+}
+
+.app-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column
+}
+
+.topbar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: linear-gradient(90deg, #fff, #f8fafc);
+    box-shadow: 0 2px 6px rgba(15, 23, 36, 0.04)
+}
+
+
+nav :hover {
+    text-decoration: underline;
+    background-color: #569bf5;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 50px;
+    color: white !important;
+}
+
+.topbar .brand {
+    font-weight: 700
+}
+
+.topbar nav a {
+    margin-right: 12px;
+    text-decoration: none;
+    color: inherit
+}
+
+.topbar .user-area {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.container {
+    max-width: 920px;
+    margin: 28px auto;
+    padding: 0 16px;
+    flex: 1
+}
+
+.card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(11, 20, 40, 0.04)
+}
+
+.center-card {
+    max-width: 420px;
+    margin: 40px auto;
+    text-align: center
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.user-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 18px 0
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.btn[disabled] {
+    opacity: 0.5
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid rgba(11, 116, 255, 0.12)
+}
+
+.btn-primary {
+    background: var(--primary)
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer
+}
+
+.hint {
+    margin-top: 12px;
+    color: var(--muted)
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px
+}
+
+.chat-box {
+    height: 380px;
+    overflow: auto;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #eef2f6;
+    background: linear-gradient(180deg, #fbfdff, #ffffff);
+}
+
+.message-row {
+    display: flex;
+    margin-bottom: 12px
+}
+
+.message-row.mine {
+    justify-content: flex-end
+}
+
+.message-row .message-content {
+    max-width: 72%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #eefdf6
+}
+
+.message-row.sys .message-content {
+    background: #f3f4f6
+}
+
+.message-sender {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+.message-text {
+    white-space: pre-wrap
+}
+
+.message-time {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+    text-align: right
+}
+
+.chat-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e6eef6
+}
+
+.history-list {
+    margin-top: 12px
+}
+
+.history-item {
+    padding: 12px;
+    border-bottom: 1px dashed #eef2f6
+}
+
+.small-muted {
+    color: var(--muted);
+    margin-right: 6px
+}
+
+.user-badge {
+    background: #eef6ff;
+    padding: 6px 10px;
+    border-radius: 8px
+}
+
+
+/* Typing Animation */
+.typing-indicator {
+display: inline-flex;
+gap: 4px;
+padding: 10px 14px;
+background: #e5e7eb;
+border-radius: 10px;
+width: fit-content;
+align-self: flex-start;
+margin-left: 10px;
+}
+
+
+.typing-dot {
+width: 6px;
+height: 6px;
+background: #9ca3af;
+border-radius: 50%;
+animation: blink 1s infinite ease-in-out;
+}
+
+
+.typing-dot:nth-child(2) {
+animation-delay: 0.2s;
+}
+
+
+.typing-dot:nth-child(3) {
+animation-delay: 0.4s;
+}
+
+
+@keyframes blink {
+0% { opacity: 0.2; }
+50% { opacity: 1; }
+100% { opacity: 0.2; }
+}
+
+
+/* responsive */
+@media (max-width:600px) {
+    .chat-box {
+        height: 60vh
+    }
+}
+
