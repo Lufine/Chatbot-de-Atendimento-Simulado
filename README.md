@@ -108,7 +108,7 @@ npm install
 
 ### 2.3 Execute o frontend:
 ```bash
-npm start
+npm run dev
 ```
 
 O frontend abrirá automaticamente em:
