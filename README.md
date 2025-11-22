@@ -38,6 +38,7 @@ A tela de histórico exibe apenas as mensagens do usuário atualmente selecionad
 O projeto é dividido em duas partes independentes: backend (Django) e frontend (React).
 Abaixo está a estrutura simplificada do repositório:
 
+```bash
 /backend
 └── chatprojeto/
     ├── chat/               # App principal (models, views, serializers)
@@ -50,7 +51,7 @@ Abaixo está a estrutura simplificada do repositório:
     ├── package.json
     ├── package-lock.json
     ├── index.html
-
+```
 
 ---
 
